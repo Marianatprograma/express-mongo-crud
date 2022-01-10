@@ -1,11 +1,11 @@
-import { connect } from "mongoose";
+import { connect } from "mongoose"
 
 (async () => {
   try {
-    const db = await connect('mongodb://localhost/myapp');
+    const db = await connect('mongodb://localhost/marianota');
+    console.log("DB connected to", db.connection.name);   
 
-    console.log("DB connected to");
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 })();
